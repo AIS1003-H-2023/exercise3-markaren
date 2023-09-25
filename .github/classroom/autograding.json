@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "exercise3",
+      "setup": "mkdir build && cmake . -B build && cmake --build build",
+      "run": "cd build/bin && ./test_file_reader",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 5,
+      "points": 1
+    }
+  ]
+}
