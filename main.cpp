@@ -9,7 +9,7 @@ int main() {
 
     FileReader reader;
     auto result = reader.read(file);
-    if (result) {
+    if (result) { // always check if optional has value before reading
         std::cout << result.value() << std::endl;
     } else {
         std::cerr << "Could not read " << file << std::endl;
