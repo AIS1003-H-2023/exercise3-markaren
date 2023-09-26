@@ -3,10 +3,12 @@
 
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 std::optional<std::string> FileReader::read(const std::filesystem::path &path) {
 
     if (cache_.contains(path.string())) {
+        std::cout << "Cache hit for key: " << std::filesystem::absolute(path) << std::endl;
         return cache_[path.string()];
     }
 
